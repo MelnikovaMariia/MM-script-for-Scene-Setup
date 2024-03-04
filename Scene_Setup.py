@@ -40,14 +40,9 @@ def set_render_settings():
 #playback settings
 def set_playback_speed_and_fps():
     # Set the playback speed
-    cmds.playbackOptions(playbackSpeed=24, maxPlaybackSpeed=24)
-
-    # Set the desired frames per second (fps)
+    cmds.playbackOptions(playbackSpeed=1, maxPlaybackSpeed=1)
     cmds.currentUnit(time='film')
-
-# Set the desired frames per second (fps) and playback speed
-desired_fps = 24.0
-desired_playback_speed = 1.0  
+ 
 
 #playblast settings
 def set_playblast():
@@ -56,7 +51,7 @@ def set_playblast():
  
 # We create a simple window with a QWidget
 window = QMainWindow()
-window.setWindowTitle('MM script for Scene Setup')
+window.setWindowTitle('Set Scene')
 
 central = QWidget()
 window.setCentralWidget(central)
@@ -147,4 +142,5 @@ button4.clicked.connect(set_render_settings)
 button5.clicked.connect(set_playback_speed_and_fps)
 button6.clicked.connect(set_playblast)
 window.show()
+
 
